@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Internal stylesheet import -->
+		<link rel="stylesheet" href="main.css">
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['geochart', 'corechart'],
+        'mapsApiKey': 'AIzaSyCn6fsMfz3C5Pr5GmqBuFQi-S4k5HLVf7s'
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+	  google.charts.setOnLoadCallback(drawCategories);
+	  google.charts.setOnLoadCallback(drawComparisons);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ["Entity","Plastic waste generation before recycling (tonnes in 2010)"],
+          ["Albania",73364],
+          ["Algeria",1898343],
+          ["Angola",528843],
+          ["Antigua and Barbuda",22804],
+          ["Argentina",2753550],
+          ["Aruba",9352],
+          ["Australia",900658],
+          ["Bahamas",51364],
+          ["Bahrain",59785],
+          ["Bangladesh",1888170],
+          ["Barbados",58164],
+          ["Belgium",318151],
+          ["Belize",20191],
+          ["Benin",144382],
+          ["Bermuda",5990],
+          ["Bosnia and Herzegovina",195633],
+          ["Brazil",11852055],
+          ["British Virgin Islands",2504],
+          ["Brunei",3688],
+          ["Bulgaria",415707],
+          ["Cambodia",344698],
+          ["Cameroon",335305],
+          ["Canada",1154309],
+          ["Cape Verde",11919],
+          ["Cayman Islands",5106],
+          ["Channel Islands",14678],
+          ["Chile",738106],
+          ["China",59079741],
+          ["Colombia",2413455],
+          ["Comoros",50599],
+          ["Congo",110479],
+          ["Costa Rica",428029],
+          ["Cote d'Ivoire",766988],
+          ["Croatia",406347],
+          ["Cuba",368154],
+          ["Curacao",13678],
+          ["Cyprus",100713],
+          ["Democratic Republic of Congo",1059795],
+          ["Denmark",95171],
+          ["Djibouti",31999],
+          ["Dominica",3885],
+          ["Dominican Republic",520238],
+          ["Ecuador",801321],
+          ["Egypt",5464471],
+          ["El Salvador",330763],
+          ["Equatorial Guinea",49990],
+          ["Eritrea",72120],
+          ["Estonia",85534],
+          ["Faeroe Islands",4466],
+          ["Fiji",59324],
+          ["Finland",458084],
+          ["France",4557128],
+          ["French Polynesia",24634],
+          ["Gabon",32329],
+          ["Gambia",29646],
+          ["Georgia",97443],
+          ["Germany",14476561],
+          ["Ghana",357877],
+          ["Gibraltar",3053],
+          ["Greece",811858],
+          ["Greenland",5234],
+          ["Grenada",12417],
+          ["Guam",14666],
+          ["Guatemala",1495229],
+          ["Guinea",118196],
+          ["Guinea-Bissau",30666],
+          ["Guyana",159681],
+          ["Haiti",328487],
+          ["Honduras",565317],
+          ["Hong Kong",1020406],
+          ["Iceland",32620],
+          ["India",4493080],
+          ["Indonesia",5045714],
+          ["Iran",3919268],
+          ["Iraq",1156524],
+          ["Ireland",715716],
+          ["Israel",826436],
+          ["Italy",2899258],
+          ["Jamaica",34962],
+          ["Japan",7993489],
+          ["Jordan",377506],
+          ["Kenya",407506],
+          ["Kiribati",3859],
+          ["Kuwait",750690],
+          ["Latvia",94935],
+          ["Lebanon",148807],
+          ["Liberia",121050],
+          ["Libya",324250],
+          ["Lithuania",149227],
+          ["Macao",72126],
+          ["Madagascar",123526],
+          ["Malaysia",2031675],
+          ["Maldives",43134],
+          ["Malta",32377],
+          ["Marshall Islands",3674],
+          ["Mauritania",59287],
+          ["Mauritius",104971],
+          ["Mexico",3725463],
+          ["Micronesia (country)",3895],
+          ["Monaco",3412],
+          ["Montenegro",32557],
+          ["Morocco",863555],
+          ["Mozambique",132612],
+          ["Myanmar",1373018],
+          ["Namibia",114222],
+          ["Nauru",527],
+          ["Netherlands",2571398],
+          ["New Caledonia",22995],
+          ["New Zealand",525630],
+          ["Nicaragua",299480],
+          ["Nigeria",5961750],
+          ["North Korea",484700],
+          ["Northern Mariana Islands",5006],
+          ["Norway",499682],
+          ["Oman",93251],
+          ["Pakistan",6412210],
+          ["Palau",1076],
+          ["Palestine",87636],
+          ["Panama",192818],
+          ["Papua New Guinea",267234],
+          ["Peru",1543879],
+          ["Philippines",2565766],
+          ["Poland",1346905],
+          ["Portugal",1022683],
+          ["Puerto Rico",342306],
+          ["Qatar",103933],
+          ["Romania",310385],
+          ["Russia",5839685],
+          ["Saint Kitts and Nevis",12280],
+          ["Saint Lucia",32882],
+          ["Saint Vincent and the Grenadines",8818],
+          ["Samoa",7000],
+          ["Sao Tome and Principe",6571],
+          ["Saudi Arabia",1561618],
+          ["Senegal",485586],
+          ["Seychelles",11730],
+          ["Sierra Leone",96655],
+          ["Singapore",359483],
+          ["Sint Maarten (Dutch part)",3263],
+          ["Slovenia",108421],
+          ["Solomon Islands",19842],
+          ["Somalia",237569],
+          ["South Africa",4465798],
+          ["South Korea",2025772],
+          ["Spain",4709157],
+          ["Sri Lanka",2621606],
+          ["Sudan",1292740],
+          ["Suriname",31300],
+          ["Sweden",164305],
+          ["Syria",1365594],
+          ["Tanzania",386998],
+          ["Thailand",3532495],
+          ["Togo",135294],
+          ["Tonga",8476],
+          ["Trinidad and Tobago",1745123],
+          ["Tunisia",559235],
+          ["Turkey",5596657],
+          ["Turks and Caicos Islands",2851],
+          ["Tuvalu",554],
+          ["Ukraine",1724509],
+          ["United Arab Emirates",600741],
+          ["United Kingdom",4925590],
+          ["United States",37825550],
+          ["Uruguay",310379],
+          ["Vanuatu",25443],
+          ["Venezuela",2669998],
+          ["Vietnam",3268227],
+          ["Yemen",887497]
+        ]);
+		
+		
+
+        var options = {
+          region: 'world',
+          colorAxis: {colors: ['#ffffff', '#f0e67a', '#ffa940', '#b31a05'], values: [0, 5000000, 10000000, 60000000], minValue: 0, maxValue: 40000000},
+          backgroundColor: '#96b8ff',
+          datalessRegionColor: '#bdbdbd',
+          defaultColor: '#f5f5f5',
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('chloromap'));
+        chart.draw(data, options);
+      }
+	  
+	  function drawCategories() {
+        var data = google.visualization.arrayToDataTable([
+          ['Market Sector', 'Production', 'Waste Generation'],
+          ['Packaging', 146, 141],
+          ['Transportation', 27, 17],
+          ['Building and Construction', 65, 13],
+          ['Electrical/ Electronic', 18, 13],
+          ['Consumer & Institutional Products', 42, 37],
+          ['Industrial Machinery', 3, 1],
+          ['Textiles', 59, 42],
+          ['Other', 47, 38],
+        ]);
+
+        var options = {
+          title: 'Global Plastic Production and Waste Generation (2015)',
+		  colors:['#3e9c40','#c94f4f'],
+		  hAxis: {
+            title: 'Million Metric Tons',
+			minValue: 0,
+			ticks: [20,40,60,80,100,120,140]
+		  },
+		  vAxis: {
+          textStyle: {
+            fontSize: 10,
+            bold: true
+          }
+        },
+          bars: 'horizontal'
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('marketsectors'));
+        chart.draw(data, options);
+      }
+	  
+	  function drawComparisons() {
+        var data = google.visualization.arrayToDataTable([
+          ['Item', 'Weight'],
+          ['Plastic Straw', 1],
+          ['Reusable Plastic Bag', 5],
+          ['Water Bottle', 10.3],
+          ['Medium 100% Polyester Shirt', 113.4],
+          ['5\'x10\' Fishing Net', 294.8]
+        ]);
+		
+		var view = new google.visualization.DataView(data);
+		view.setColumns([0, 1,
+						 { calc: "stringify",
+						   sourceColumn: 1,
+						   type: "string",
+						   role: "annotation" }]);
+		
+        var options = {
+          title: 'Weight of Commonly Polluted Items',
+		  titleTextStyle: {fontSize: 18},
+		  colors:['#6490f5'],
+		  hAxis: {
+            title: 'Grams',
+			minValue: 0
+		  },
+		  legend: {position: 'none'},
+		  vAxis: {
+          textStyle: {
+            bold: true
+          }
+        },
+          bars: 'horizontal'
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('weights'));
+        chart.draw(view, options);
+      }
+    </script>
+	</head>
+	<body>
+	<table class="table">
+	<tr>
+	<td><h4 class="Chart1title">Plastic Waste Generation before recycling (2010)</h4>
+	<div id="chloromap" class="chloromap"></div>
+	<p class="AltText">Source: Jambeck, J. R., Geyer, R., Wilcox, C., Siegler, T. R., Perryman, M., Andrady, A., ... & Law, K. L. (2015). Plastic waste inputs from land into the ocean. Science, 347(6223), 768-771. <a class = "URL" href="http://science.sciencemag.org/content/347/6223/768/">URL</a></p></td>
+	<td><div id="marketsectors" class="bars"></div>
+	<p class="AltText2">Source: Geyer, Roland, Jenna R. Jambeck, and Kara Lavender Law. “Production, Use, and Fate of All Plastics Ever Made.” Science Advances 3, no. 7 (2017). <a class = "URL" href="https://advances.sciencemag.org/content/3/7/e1700782">URL</a></p></td>
+	</tr>
+	<tr>
+	<td>
+	<ul class = "Words">
+	  <li>As shown by the Chloropleth Graph, the United States is one of the major leaders in producing plastic waste.</li>
+	  <li>As seen by the bar graph in the top right, the majority of waste is the packaging of items.</li>
+	  <li>A survey by Ocean Cleanup has found that 46% of the plastic mass in the Great Pacific Garbage Patch is fishing nets, with the rest primarily being misc. fishing equipment. </li>
+	  <li>According to a Greenpeace Report, 10% of all plastic produced ends up in the Ocean.</li>
+	  <li>The combination of those previous 2 facts makes it seem likely that Plastic Straws are not the biggest concern for avoiding pollution.</li>
+	  <li>The graph in the lower right shows how more impactful other plastic items are when compared with a plastic straw.</li>
+	  <li>Note: Fishing Nets size vary and in industrial circumstances will be magnitudes larger.</li>
+	</ul>
+	</td>
+	<td><div id="weights" class="bars"></div></td>
+	</tr>
+	</table>
+	</body>
+</html>

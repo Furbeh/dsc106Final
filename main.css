@@ -1,0 +1,46 @@
+body {
+	background-color: #c0f5ba;
+	color: #333;
+	font-family: Playfair Display,Georgia,Times New Roman,Times,serif;
+}
+.Chart1title {
+	padding-left: 45px;
+	padding-top: -10px;
+}
+
+.chloromap {
+	width: 800px;
+	height: 500px;
+    margin-left: 2%;
+    border: 1px solid black;
+    margin-bottom: -10px;
+    margin-top: -10px;
+}
+
+.bars {
+	width: 850px;
+	height: 400px;
+    border: 1px solid black;
+    margin-top: -5%;
+}
+
+.AltText {
+	padding-left: 5px;
+	font-size:80%;
+	font-family: Times New Roman,Times,serif;
+}
+
+.URL {
+	font-weight: bold; 
+	text-decoration: underline;
+}
+.AltText2 {
+	padding-left: 5px;
+	font-size:80%;
+	font-family: Times New Roman,Times,serif;
+}
+
+.Words {;
+	font-size:120%;
+	font-family: Arial,Times,serif;
+}
